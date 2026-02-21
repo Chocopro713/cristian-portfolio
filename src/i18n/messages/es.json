@@ -1,0 +1,135 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Mí",
+    "experience": "Experiencia",
+    "expertise": "Expertise",
+    "projects": "Proyectos",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Senior Full Stack Engineer",
+    "subtitle": "Diseñando sistemas backend escalables y arquitecturas orientadas a eventos",
+    "viewProjects": "Ver Proyectos",
+    "contactMe": "Contáctame"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "description": "Soy un Ingeniero Full Stack Senior apasionado por construir sistemas escalables y mantenibles. Con amplia experiencia en arquitecturas distribuidas y sistemas orientados a eventos, me especializo en diseñar soluciones que manejan escenarios de alto rendimiento mientras mantienen principios de código limpio.",
+    "focus1": "Diseño de Sistemas Escalables",
+    "focus1Desc": "Construyendo sistemas que crecen sin problemas con las demandas del negocio",
+    "focus2": "Arquitectura Limpia",
+    "focus2Desc": "Implementando patrones que aseguran mantenibilidad y testabilidad",
+    "focus3": "Sistemas Distribuidos",
+    "focus3Desc": "Diseñando arquitecturas tolerantes a fallos y altamente disponibles"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "subtitle": "Entregando soluciones de impacto en entornos empresariales",
+    "project1": {
+      "title": "Optimización Logística Empresarial",
+      "description": "Lideré el desarrollo de una plataforma logística integral que logró una mejora del 25-50% en eficiencia operativa a través de optimización inteligente de rutas y sistemas de seguimiento en tiempo real.",
+      "impact": "25-50% Mejora en Eficiencia"
+    },
+    "project2": {
+      "title": "Sistemas Distribuidos en Tiempo Real con Kafka",
+      "description": "Arquitecté e implementé microservicios orientados a eventos usando Apache Kafka, habilitando procesamiento de datos en tiempo real y comunicación fluida entre servicios distribuidos.",
+      "impact": "Procesamiento en Tiempo Real"
+    },
+    "project3": {
+      "title": "Plataforma de Eventos con QR Seguro",
+      "description": "Diseñé y construí una plataforma segura de gestión de eventos con validación de códigos QR encriptados, arquitectura multi-tenant y seguimiento de asistencia en tiempo real.",
+      "impact": "Seguridad Mejorada"
+    }
+  },
+  "expertise": {
+    "title": "Arquitectura & Expertise",
+    "subtitle": "Competencias principales en arquitectura de software moderna",
+    "cleanArch": {
+      "title": "Arquitectura Limpia",
+      "description": "Implementando separación de responsabilidades con inversión de dependencias para bases de código mantenibles"
+    },
+    "ddd": {
+      "title": "DDD & CQRS",
+      "description": "Diseño Orientado al Dominio con Segregación de Responsabilidad de Comandos y Consultas para dominios complejos"
+    },
+    "microservices": {
+      "title": "Microservicios",
+      "description": "Diseñando arquitecturas de servicios débilmente acoplados e independientemente desplegables"
+    },
+    "eventDriven": {
+      "title": "Sistemas Orientados a Eventos",
+      "description": "Construyendo sistemas reactivos con Apache Kafka y colas de mensajes"
+    },
+    "secureApi": {
+      "title": "Diseño Seguro de APIs",
+      "description": "Implementando OAuth2, JWT y patrones de comunicación segura"
+    },
+    "performance": {
+      "title": "Optimización de Rendimiento",
+      "description": "Perfilando y optimizando aplicaciones para máximo throughput"
+    }
+  },
+  "techStack": {
+    "title": "Stack Tecnológico",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "databases": "Bases de Datos",
+    "devops": "DevOps"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Contribuciones open source y proyectos personales",
+    "viewOnGithub": "Ver en GitHub",
+    "viewAll": "Ver Todos los Proyectos"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Reflexiones sobre arquitectura de software y desarrollo",
+    "readMore": "Leer Más",
+    "post1": {
+      "title": "Construyendo Sistemas Orientados a Eventos Escalables con Kafka",
+      "excerpt": "Una inmersión profunda en el diseño de arquitecturas resilientes orientadas a eventos usando Apache Kafka y .NET.",
+      "date": "15 Feb, 2026"
+    },
+    "post2": {
+      "title": "Arquitectura Limpia en .NET: Una Guía Práctica",
+      "excerpt": "Cómo implementar principios de Arquitectura Limpia en aplicaciones .NET para mejor mantenibilidad.",
+      "date": "10 Feb, 2026"
+    },
+    "post3": {
+      "title": "Patrón CQRS: Cuándo y Cómo Usarlo",
+      "excerpt": "Entendiendo el patrón de Segregación de Responsabilidad de Comandos y Consultas y sus aplicaciones en el mundo real.",
+      "date": "5 Feb, 2026"
+    }
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "subtitle": "Hablemos sobre tu próximo proyecto",
+    "email": "Email",
+    "phone": "Teléfono",
+    "social": "Social",
+    "connect": "Conectemos",
+    "sendMessage": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "name": "Tu Nombre",
+    "emailPlaceholder": "tu.email@ejemplo.com",
+    "message": "Tu Mensaje",
+    "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+    "successMessage": "¡Mensaje enviado exitosamente! Te responderé pronto.",
+    "errorMessage": "Error al enviar el mensaje. Por favor, intenta de nuevo.",
+    "errors": {
+      "nameRequired": "El nombre es requerido",
+      "nameMin": "El nombre debe tener al menos 2 caracteres",
+      "emailRequired": "El email es requerido",
+      "emailInvalid": "Por favor ingresa un email válido",
+      "messageRequired": "El mensaje es requerido",
+      "messageMin": "El mensaje debe tener al menos 10 caracteres"
+    }
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "madeWith": "Hecho con"
+  }
+}

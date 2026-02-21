@@ -1,36 +1,134 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cristian Barbosa - Professional Portfolio
 
-## Getting Started
+A modern, professional portfolio website built with Next.js 16, TypeScript, TailwindCSS, and Framer Motion. Features bilingual support (English/Spanish), smooth animations, and a dark modern startup design.
 
-First, run the development server:
+![Portfolio Preview](./public/og-image.png)
+
+## ✨ Features
+
+- **Next.js 16 App Router** - Latest Next.js with server components
+- **TypeScript** - Full type safety
+- **TailwindCSS** - Modern utility-first CSS
+- **Framer Motion** - Smooth animations and transitions
+- **next-intl** - Bilingual support (EN/ES)
+- **GitHub API Integration** - Automatically fetches latest repositories
+- **SEO Optimized** - Meta tags, sitemap, and robots.txt
+- **Responsive Design** - Mobile-first approach
+- **Dark Theme** - Modern startup aesthetic
+- **Glassmorphism** - Subtle glass effect cards
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/Chocopro713/portfolio.git
+
+# Navigate to the project
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── layout.tsx         # Root layout with providers
+│   ├── page.tsx           # Home page
+│   ├── globals.css        # Global styles
+│   ├── loading.tsx        # Loading state
+│   ├── error.tsx          # Error boundary
+│   ├── not-found.tsx      # 404 page
+│   ├── sitemap.ts         # SEO sitemap
+│   └── robots.ts          # SEO robots
+├── components/
+│   ├── layout/            # Layout components
+│   │   ├── Navbar.tsx
+│   │   └── Footer.tsx
+│   ├── sections/          # Page sections
+│   │   ├── Hero.tsx
+│   │   ├── About.tsx
+│   │   ├── Experience.tsx
+│   │   ├── Expertise.tsx
+│   │   ├── Projects.tsx
+│   │   ├── Blog.tsx
+│   │   └── Contact.tsx
+│   └── ui/                # Reusable UI components
+│       ├── AnimatedSection.tsx
+│       ├── LanguageToggle.tsx
+│       └── ProjectCard.tsx
+├── i18n/                  # Internationalization
+│   ├── actions.ts         # Server actions for locale
+│   ├── request.ts         # next-intl config
+│   └── messages/
+│       ├── en.json        # English translations
+│       └── es.json        # Spanish translations
+└── lib/                   # Utility functions
+    ├── github.ts          # GitHub API integration
+    └── utils.ts           # Helper functions
+```
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+### Backend
+- .NET, C#, Node.js, Python
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Frontend
+- Angular, MAUI, Xamarin, Next.js, React
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Databases
+- SQL Server, PostgreSQL, Oracle
 
-## Deploy on Vercel
+### DevOps
+- Docker, Kafka, Git, SonarQube
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌐 Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Vercel (Recommended)
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+```
+
+### Docker
+
+```bash
+# Build image
+docker build -t portfolio .
+
+# Run container
+docker run -p 3000:3000 portfolio
+```
+
+## 📧 Contact
+
+- **Email:** Cristianbr7@live.com
+- **Phone:** +57 3046317065
+- **GitHub:** [Chocopro713](https://github.com/Chocopro713)
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+Built with ❤️ by Cristian Barbosa
+# cristian-portfolio

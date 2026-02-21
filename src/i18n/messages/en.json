@@ -1,0 +1,135 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "expertise": "Expertise",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Senior Full Stack Engineer",
+    "subtitle": "Designing scalable backend systems and event-driven architectures",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm a Senior Full Stack Engineer with a passion for building scalable, maintainable systems. With extensive experience in distributed architectures and event-driven systems, I specialize in designing solutions that handle high-throughput scenarios while maintaining clean code principles.",
+    "focus1": "Scalable Systems Design",
+    "focus1Desc": "Building systems that grow seamlessly with business demands",
+    "focus2": "Clean Architecture",
+    "focus2Desc": "Implementing patterns that ensure maintainability and testability",
+    "focus3": "Distributed Systems",
+    "focus3Desc": "Designing fault-tolerant, highly available architectures"
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "Delivering impactful solutions across enterprise environments",
+    "project1": {
+      "title": "Enterprise Logistics Optimization",
+      "description": "Led the development of a comprehensive logistics platform that achieved 25-50% improvement in operational efficiency through intelligent route optimization and real-time tracking systems.",
+      "impact": "25-50% Efficiency Improvement"
+    },
+    "project2": {
+      "title": "Real-Time Kafka Distributed Systems",
+      "description": "Architected and implemented event-driven microservices using Apache Kafka, enabling real-time data processing and seamless communication between distributed services.",
+      "impact": "Real-Time Processing"
+    },
+    "project3": {
+      "title": "Secure QR Event Platform",
+      "description": "Designed and built a secure event management platform featuring encrypted QR code validation, multi-tenant architecture, and real-time attendance tracking.",
+      "impact": "Enhanced Security"
+    }
+  },
+  "expertise": {
+    "title": "Architecture & Expertise",
+    "subtitle": "Core competencies in modern software architecture",
+    "cleanArch": {
+      "title": "Clean Architecture",
+      "description": "Implementing separation of concerns with dependency inversion for maintainable codebases"
+    },
+    "ddd": {
+      "title": "DDD & CQRS",
+      "description": "Domain-Driven Design with Command Query Responsibility Segregation for complex domains"
+    },
+    "microservices": {
+      "title": "Microservices",
+      "description": "Designing loosely coupled, independently deployable service architectures"
+    },
+    "eventDriven": {
+      "title": "Event-Driven Systems",
+      "description": "Building reactive systems with Apache Kafka and message queues"
+    },
+    "secureApi": {
+      "title": "Secure API Design",
+      "description": "Implementing OAuth2, JWT, and secure communication patterns"
+    },
+    "performance": {
+      "title": "Performance Optimization",
+      "description": "Profiling and optimizing applications for maximum throughput"
+    }
+  },
+  "techStack": {
+    "title": "Tech Stack",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "databases": "Databases",
+    "devops": "DevOps"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Open source contributions and personal projects",
+    "viewOnGithub": "View on GitHub",
+    "viewAll": "View All Projects"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Thoughts on software architecture and development",
+    "readMore": "Read More",
+    "post1": {
+      "title": "Building Scalable Event-Driven Systems with Kafka",
+      "excerpt": "A deep dive into designing resilient event-driven architectures using Apache Kafka and .NET.",
+      "date": "Feb 15, 2026"
+    },
+    "post2": {
+      "title": "Clean Architecture in .NET: A Practical Guide",
+      "excerpt": "How to implement Clean Architecture principles in .NET applications for better maintainability.",
+      "date": "Feb 10, 2026"
+    },
+    "post3": {
+      "title": "CQRS Pattern: When and How to Use It",
+      "excerpt": "Understanding the Command Query Responsibility Segregation pattern and its real-world applications.",
+      "date": "Feb 5, 2026"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's discuss your next project",
+    "email": "Email",
+    "phone": "Phone",
+    "social": "Social",
+    "connect": "Let's Connect",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "name": "Your Name",
+    "emailPlaceholder": "your.email@example.com",
+    "message": "Your Message",
+    "messagePlaceholder": "Tell me about your project...",
+    "successMessage": "Message sent successfully! I'll get back to you soon.",
+    "errorMessage": "Failed to send message. Please try again.",
+    "errors": {
+      "nameRequired": "Name is required",
+      "nameMin": "Name must be at least 2 characters",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "messageRequired": "Message is required",
+      "messageMin": "Message must be at least 10 characters"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "madeWith": "Made with"
+  }
+}
