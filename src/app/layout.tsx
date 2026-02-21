@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://cristianbarbosa.dev",
+    url: "https://cbarbosa.org",
     siteName: "Cristian Barbosa Portfolio",
     title: "Cristian Barbosa | Senior Full Stack Engineer",
     description: "Senior Full Stack Engineer specializing in Event-Driven Architecture, .NET, Kafka, and Distributed Systems.",

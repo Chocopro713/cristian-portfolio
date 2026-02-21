@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://cristianbarbosa.dev/sitemap.xml',
+    sitemap: 'https://cbarbosa.org/sitemap.xml',
   };
 }
