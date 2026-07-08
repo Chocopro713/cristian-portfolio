@@ -1,9 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { sendContactEmail } from '@/lib/email';
+import { verifyChallenge } from '@/lib/captcha';
 
 // Rate limiting map (in production, use Redis or similar)
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+
+// Tracks already-used captcha tokens to prevent replaying a solved answer
+const usedCaptchaTokens = new Set<string>();
 
 const RATE_LIMIT = 5; // Max requests
 const RATE_LIMIT_WINDOW = 60 * 60 * 1000; // 1 hour in milliseconds
@@ -26,6 +30,8 @@ const contactSchema = z.object({
     .min(10, 'Message must be at least 10 characters')
     .max(5000, 'Message must be less than 5000 characters')
     .trim(),
+  captchaToken: z.string().min(1, 'Missing captcha token'),
+  captchaAnswer: z.string().min(1, 'Captcha answer is required'),
 });
 
 function getClientIP(request: NextRequest): string {
@@ -95,13 +101,21 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const { name, email, message } = validationResult.data;
+    const { name, email, message, captchaToken, captchaAnswer } = validationResult.data;
 
     // Check for honeypot (if included in form)
     if (body.website) {
       // Bot detected, return success without sending
       return NextResponse.json({ success: true });
     }
+
+    if (usedCaptchaTokens.has(captchaToken) || !verifyChallenge(captchaToken, captchaAnswer)) {
+      return NextResponse.json(
+        { error: 'Verificación incorrecta o expirada. Intenta de nuevo.' },
+        { status: 400 }
+      );
+    }
+    usedCaptchaTokens.add(captchaToken);
 
     // Send email
     await sendContactEmail({ name, email, message });

@@ -5,7 +5,6 @@
     "experience": "Experiencia",
     "expertise": "Expertise",
     "projects": "Proyectos",
-    "blog": "Blog",
     "contact": "Contacto"
   },
   "hero": {
@@ -80,35 +79,45 @@
   },
   "projects": {
     "title": "Proyectos",
-    "subtitle": "Contribuciones open source y proyectos personales",
-    "viewOnGithub": "Ver en GitHub",
-    "viewAll": "Ver Todos los Proyectos"
-  },
-  "blog": {
-    "title": "Blog",
-    "subtitle": "Reflexiones sobre arquitectura de software y desarrollo",
-    "readMore": "Leer Más",
-    "post1": {
-      "title": "Construyendo Sistemas Orientados a Eventos Escalables con Kafka",
-      "excerpt": "Una inmersión profunda en el diseño de arquitecturas resilientes orientadas a eventos usando Apache Kafka y .NET.",
-      "date": "15 Feb, 2026"
-    },
-    "post2": {
-      "title": "Arquitectura Limpia en .NET: Una Guía Práctica",
-      "excerpt": "Cómo implementar principios de Arquitectura Limpia en aplicaciones .NET para mejor mantenibilidad.",
-      "date": "10 Feb, 2026"
-    },
-    "post3": {
-      "title": "Patrón CQRS: Cuándo y Cómo Usarlo",
-      "excerpt": "Entendiendo el patrón de Segregación de Responsabilidad de Comandos y Consultas y sus aplicaciones en el mundo real.",
-      "date": "5 Feb, 2026"
-    }
+    "subtitle": "Sitios web reales, diseñados y desarrollados a la medida para negocios de distintas industrias",
+    "viewProject": "Ver sitio",
+    "ctaTitle": "¿Tienes un negocio y necesitas un sitio web así?",
+    "ctaButton": "Hablemos de tu proyecto",
+    "items": [
+      {
+        "slug": "contabilidad-plus",
+        "category": "Contaduría & Finanzas",
+        "name": "Contabilidad Plus",
+        "description": "Sitio corporativo para una firma de contaduría: presenta sus servicios, genera confianza con clientes potenciales y facilita agendar asesorías.",
+        "tags": ["Diseño Corporativo", "SEO Local", "Formulario de Contacto"]
+      },
+      {
+        "slug": "taller-mecanico-rodriguez",
+        "category": "Automotriz",
+        "name": "Taller Mecánico Rodríguez",
+        "description": "Landing page para un taller mecánico: muestra servicios, marcas atendidas y permite agendar citas directamente desde el sitio.",
+        "tags": ["Diseño Responsive", "Agenda de Citas", "Identidad Visual"]
+      },
+      {
+        "slug": "restaurante-sabor-casero",
+        "category": "Restaurantes",
+        "name": "Sabor Casero",
+        "description": "Sitio web para un restaurante familiar: destaca el menú, el ambiente del lugar y facilita las reservas de mesa.",
+        "tags": ["Menú Digital", "Galería", "Reservas Online"]
+      },
+      {
+        "slug": "clinica-dental-sonrisa",
+        "category": "Salud",
+        "name": "Clínica Dental Sonrisa",
+        "description": "Sitio para una clínica dental: comunica sus servicios y especialidades, y convierte visitantes en pacientes agendados.",
+        "tags": ["Confianza & Credibilidad", "Testimonios", "Agenda Online"]
+      }
+    ]
   },
   "contact": {
     "title": "Ponte en Contacto",
     "subtitle": "Hablemos sobre tu próximo proyecto",
     "email": "Email",
-    "phone": "Teléfono",
     "social": "Social",
     "connect": "Conectemos",
     "sendMessage": "Enviar Mensaje",
@@ -117,6 +126,8 @@
     "emailPlaceholder": "tu.email@ejemplo.com",
     "message": "Tu Mensaje",
     "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+    "captchaLoading": "Cargando verificación...",
+    "captchaPlaceholder": "Escribe el resultado",
     "successMessage": "¡Mensaje enviado exitosamente! Te responderé pronto.",
     "errorMessage": "Error al enviar el mensaje. Por favor, intenta de nuevo.",
     "errors": {
@@ -125,7 +136,8 @@
       "emailRequired": "El email es requerido",
       "emailInvalid": "Por favor ingresa un email válido",
       "messageRequired": "El mensaje es requerido",
-      "messageMin": "El mensaje debe tener al menos 10 caracteres"
+      "messageMin": "El mensaje debe tener al menos 10 caracteres",
+      "captchaRequired": "Responde la verificación para continuar"
     }
   },
   "footer": {

@@ -5,7 +5,6 @@
     "experience": "Experience",
     "expertise": "Expertise",
     "projects": "Projects",
-    "blog": "Blog",
     "contact": "Contact"
   },
   "hero": {
@@ -80,35 +79,45 @@
   },
   "projects": {
     "title": "Projects",
-    "subtitle": "Open source contributions and personal projects",
-    "viewOnGithub": "View on GitHub",
-    "viewAll": "View All Projects"
-  },
-  "blog": {
-    "title": "Blog",
-    "subtitle": "Thoughts on software architecture and development",
-    "readMore": "Read More",
-    "post1": {
-      "title": "Building Scalable Event-Driven Systems with Kafka",
-      "excerpt": "A deep dive into designing resilient event-driven architectures using Apache Kafka and .NET.",
-      "date": "Feb 15, 2026"
-    },
-    "post2": {
-      "title": "Clean Architecture in .NET: A Practical Guide",
-      "excerpt": "How to implement Clean Architecture principles in .NET applications for better maintainability.",
-      "date": "Feb 10, 2026"
-    },
-    "post3": {
-      "title": "CQRS Pattern: When and How to Use It",
-      "excerpt": "Understanding the Command Query Responsibility Segregation pattern and its real-world applications.",
-      "date": "Feb 5, 2026"
-    }
+    "subtitle": "Real websites, designed and built from scratch for businesses across different industries",
+    "viewProject": "View site",
+    "ctaTitle": "Have a business that needs a website like this?",
+    "ctaButton": "Let's talk about your project",
+    "items": [
+      {
+        "slug": "contabilidad-plus",
+        "category": "Accounting & Finance",
+        "name": "Contabilidad Plus",
+        "description": "Corporate site for an accounting firm: showcases its services, builds trust with prospective clients, and makes it easy to book a consultation.",
+        "tags": ["Corporate Design", "Local SEO", "Contact Form"]
+      },
+      {
+        "slug": "taller-mecanico-rodriguez",
+        "category": "Automotive",
+        "name": "Taller Mecánico Rodríguez",
+        "description": "Landing page for an auto repair shop: highlights services and supported brands, and lets customers book an appointment straight from the site.",
+        "tags": ["Responsive Design", "Appointment Booking", "Brand Identity"]
+      },
+      {
+        "slug": "restaurante-sabor-casero",
+        "category": "Restaurants",
+        "name": "Sabor Casero",
+        "description": "Website for a family restaurant: highlights the menu and the atmosphere of the place, and makes it easy to reserve a table.",
+        "tags": ["Digital Menu", "Gallery", "Online Reservations"]
+      },
+      {
+        "slug": "clinica-dental-sonrisa",
+        "category": "Healthcare",
+        "name": "Clínica Dental Sonrisa",
+        "description": "Site for a dental clinic: communicates its services and specialties, turning visitors into booked patients.",
+        "tags": ["Trust & Credibility", "Testimonials", "Online Booking"]
+      }
+    ]
   },
   "contact": {
     "title": "Get In Touch",
     "subtitle": "Let's discuss your next project",
     "email": "Email",
-    "phone": "Phone",
     "social": "Social",
     "connect": "Let's Connect",
     "sendMessage": "Send Message",
@@ -117,9 +126,12 @@
     "emailPlaceholder": "your.email@example.com",
     "message": "Your Message",
     "messagePlaceholder": "Tell me about your project...",
+    "captchaLoading": "Loading verification...",
+    "captchaPlaceholder": "Type the result",
     "successMessage": "Message sent successfully! I'll get back to you soon.",
     "errorMessage": "Failed to send message. Please try again.",
     "errors": {
+      "captchaRequired": "Answer the verification to continue",
       "nameRequired": "Name is required",
       "nameMin": "Name must be at least 2 characters",
       "emailRequired": "Email is required",

@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, Github, Linkedin, Send, MapPin, Loader2, CheckCircle, XCircle } from 'lucide-react';
+import { Mail, Github, Linkedin, Send, MapPin, Loader2, CheckCircle, XCircle, ShieldCheck } from 'lucide-react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error';
@@ -12,20 +12,44 @@ interface FormErrors {
   name?: string;
   email?: string;
   message?: string;
+  captchaAnswer?: string;
+}
+
+interface Challenge {
+  question: string;
+  token: string;
 }
 
 export default function Contact() {
   const t = useTranslations('contact');
-  
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
+    captchaAnswer: '',
     website: '', // Honeypot field
   });
   const [status, setStatus] = useState<FormStatus>('idle');
   const [errors, setErrors] = useState<FormErrors>({});
   const [serverError, setServerError] = useState('');
+  const [challenge, setChallenge] = useState<Challenge | null>(null);
+
+  const loadChallenge = async () => {
+    try {
+      const response = await fetch('/api/contact/challenge');
+      const data = await response.json();
+      if (response.ok) {
+        setChallenge(data);
+      }
+    } catch {
+      setChallenge(null);
+    }
+  };
+
+  useEffect(() => {
+    loadChallenge();
+  }, []);
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -48,6 +72,10 @@ export default function Contact() {
       newErrors.message = t('errors.messageMin');
     }
 
+    if (!formData.captchaAnswer.trim()) {
+      newErrors.captchaAnswer = t('errors.captchaRequired');
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -64,7 +92,7 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -78,7 +106,10 @@ export default function Contact() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          captchaToken: challenge?.token ?? '',
+        }),
       });
 
       const data = await response.json();
@@ -88,16 +119,19 @@ export default function Contact() {
       }
 
       setStatus('success');
-      setFormData({ name: '', email: '', message: '', website: '' });
-      
+      setFormData({ name: '', email: '', message: '', captchaAnswer: '', website: '' });
+
       // Reset to idle after 5 seconds
       setTimeout(() => setStatus('idle'), 5000);
     } catch (error) {
       setStatus('error');
       setServerError(error instanceof Error ? error.message : 'An unexpected error occurred');
-      
+      setFormData(prev => ({ ...prev, captchaAnswer: '' }));
+
       // Reset to idle after 5 seconds
       setTimeout(() => setStatus('idle'), 5000);
+    } finally {
+      loadChallenge();
     }
   };
 
@@ -107,12 +141,6 @@ export default function Contact() {
       label: t('email'),
       value: 'Cristianbr7@live.com',
       href: 'mailto:Cristianbr7@live.com',
-    },
-    {
-      icon: Phone,
-      label: t('phone'),
-      value: '+57 3046317065',
-      href: 'tel:+573046317065',
     },
     {
       icon: MapPin,
@@ -131,7 +159,7 @@ export default function Contact() {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/cristian-andres-barbosa-romero/',
     },
   ];
 
@@ -318,6 +346,41 @@ export default function Contact() {
                 </AnimatePresence>
               </div>
 
+              <div>
+                <label
+                  htmlFor="captchaAnswer"
+                  className="flex items-center gap-2 text-sm font-medium text-slate-300 mb-2"
+                >
+                  <ShieldCheck className="w-4 h-4 text-blue-400" />
+                  {challenge ? challenge.question : t('captchaLoading')}
+                </label>
+                <input
+                  type="text"
+                  inputMode="numeric"
+                  id="captchaAnswer"
+                  name="captchaAnswer"
+                  value={formData.captchaAnswer}
+                  onChange={handleChange}
+                  disabled={status === 'loading' || !challenge}
+                  className={`w-full px-4 py-3 rounded-xl bg-slate-800/50 border ${
+                    errors.captchaAnswer ? 'border-red-500' : 'border-slate-700'
+                  } text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors disabled:opacity-50`}
+                  placeholder={t('captchaPlaceholder')}
+                />
+                <AnimatePresence>
+                  {errors.captchaAnswer && (
+                    <motion.p
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="text-red-400 text-sm mt-1"
+                    >
+                      {errors.captchaAnswer}
+                    </motion.p>
+                  )}
+                </AnimatePresence>
+              </div>
+
               {/* Status Messages */}
               <AnimatePresence>
                 {status === 'success' && (
@@ -347,7 +410,7 @@ export default function Contact() {
 
               <motion.button
                 type="submit"
-                disabled={status === 'loading'}
+                disabled={status === 'loading' || !challenge}
                 whileHover={{ scale: status === 'loading' ? 1 : 1.02 }}
                 whileTap={{ scale: status === 'loading' ? 1 : 0.98 }}
                 className="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl text-white font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"

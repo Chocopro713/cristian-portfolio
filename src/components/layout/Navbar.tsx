@@ -30,7 +30,6 @@ export default function Navbar({ currentLocale }: NavbarProps) {
     { href: '#experience', label: t('experience') },
     { href: '#expertise', label: t('expertise') },
     { href: '#projects', label: t('projects') },
-    { href: '#blog', label: t('blog') },
     { href: '#contact', label: t('contact') },
   ];
 

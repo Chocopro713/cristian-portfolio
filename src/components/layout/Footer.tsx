@@ -44,7 +44,7 @@ export default function Footer() {
               <Github size={20} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/cristian-andres-barbosa-romero/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-500/50 transition-all duration-300"

@@ -131,7 +131,7 @@ export default function Hero() {
               {/* Image container */}
               <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-slate-700/50 glow">
                 <Image
-                  src="https://avatars.githubusercontent.com/u/25477098"
+                  src="/profile.jpg"
                   alt="Cristian Barbosa"
                   fill
                   className="object-cover"
@@ -145,7 +145,7 @@ export default function Hero() {
                 transition={{ duration: 3, repeat: Infinity }}
                 className="absolute -left-4 top-1/4 px-4 py-2 glass-card rounded-lg text-sm font-medium"
               >
-                <span className="text-blue-400">.NET</span>
+                <span className="text-blue-400">IA</span>
               </motion.div>
 
               <motion.div
@@ -153,7 +153,7 @@ export default function Hero() {
                 transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
                 className="absolute -right-4 top-1/3 px-4 py-2 glass-card rounded-lg text-sm font-medium"
               >
-                <span className="text-purple-400">Kafka</span>
+                <span className="text-purple-400">Desarrollador</span>
               </motion.div>
 
               <motion.div
@@ -161,7 +161,7 @@ export default function Hero() {
                 transition={{ duration: 3, repeat: Infinity, delay: 1 }}
                 className="absolute bottom-10 -right-8 px-4 py-2 glass-card rounded-lg text-sm font-medium"
               >
-                <span className="text-cyan-400">Microservices</span>
+                <span className="text-cyan-400">Ingeniero de Sistemas</span>
               </motion.div>
             </div>
           </motion.div>

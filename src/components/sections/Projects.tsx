@@ -1,12 +1,21 @@
 import { getTranslations } from 'next-intl/server';
-import { Github } from 'lucide-react';
-import { fetchGitHubRepos, GitHubRepo } from '@/lib/github';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import ProjectCard from '@/components/ui/ProjectCard';
+import { businessProjectStyles } from '@/data/businessProjects';
+
+interface ProjectItem {
+  slug: string;
+  category: string;
+  name: string;
+  description: string;
+  tags: string[];
+}
 
 export default async function Projects() {
-  const repos = await fetchGitHubRepos('Chocopro713');
   const t = await getTranslations('projects');
+  const items = t.raw('items') as ProjectItem[];
 
   return (
     <section id="projects" className="py-24 relative">
@@ -29,28 +38,40 @@ export default async function Projects() {
           </div>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {repos.map((repo: GitHubRepo, index: number) => (
-            <ProjectCard
-              key={repo.id}
-              repo={repo}
-              index={index}
-              viewOnGithub={t('viewOnGithub')}
-            />
-          ))}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {items.map((item, index) => {
+            const style = businessProjectStyles.find((s) => s.slug === item.slug);
+            if (!style) return null;
+            const Icon = style.icon;
+
+            return (
+              <ProjectCard
+                key={item.slug}
+                href={style.href}
+                icon={<Icon />}
+                gradient={style.gradient}
+                glow={style.glow}
+                category={item.category}
+                name={item.name}
+                description={item.description}
+                tags={item.tags}
+                index={index}
+                viewProjectLabel={t('viewProject')}
+              />
+            );
+          })}
         </div>
 
         <AnimatedSection>
           <div className="text-center">
-            <a
-              href="https://github.com/Chocopro713"
-              target="_blank"
-              rel="noopener noreferrer"
+            <p className="text-slate-300 text-lg mb-6">{t('ctaTitle')}</p>
+            <Link
+              href="#contact"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
             >
-              <Github className="w-5 h-5" />
-              {t('viewAll')}
-            </a>
+              {t('ctaButton')}
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </AnimatedSection>
       </div>

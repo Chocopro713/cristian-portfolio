@@ -1,67 +1,88 @@
 'use client';
 
+import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import { Star, GitFork, ExternalLink } from 'lucide-react';
-import { GitHubRepo, getLanguageColor } from '@/lib/github';
+import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
 
 interface ProjectCardProps {
-  repo: GitHubRepo;
+  href: string;
+  icon: ReactNode;
+  gradient: string;
+  glow: string;
+  category: string;
+  name: string;
+  description: string;
+  tags: string[];
   index: number;
-  viewOnGithub: string;
+  viewProjectLabel: string;
 }
 
-export default function ProjectCard({ repo, index, viewOnGithub }: ProjectCardProps) {
+export default function ProjectCard({
+  href,
+  icon,
+  gradient,
+  glow,
+  category,
+  name,
+  description,
+  tags,
+  index,
+  viewProjectLabel,
+}: ProjectCardProps) {
   return (
-    <motion.a
-      href={repo.html_url}
-      target="_blank"
-      rel="noopener noreferrer"
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
-      whileHover={{ scale: 1.02, y: -5 }}
-      className="glass-card glass-card-hover p-6 rounded-2xl block group"
+      whileHover={{ y: -5 }}
+      className="h-full"
     >
-      <div className="flex items-start justify-between mb-4">
-        <div className="flex-1">
+      <Link
+        href={href}
+        className={`glass-card glass-card-hover flex h-full flex-col overflow-hidden rounded-2xl group transition-shadow duration-300 hover:shadow-2xl ${glow}`}
+      >
+        {/* Browser mockup preview */}
+        <div className={`relative h-40 bg-gradient-to-br ${gradient} overflow-hidden`}>
+          <div className="absolute top-0 left-0 right-0 flex items-center gap-1.5 px-4 py-3 bg-black/20">
+            <span className="w-2.5 h-2.5 rounded-full bg-white/40" />
+            <span className="w-2.5 h-2.5 rounded-full bg-white/40" />
+            <span className="w-2.5 h-2.5 rounded-full bg-white/40" />
+          </div>
+          <div className="absolute inset-0 flex items-center justify-center text-white/90 transition-transform duration-300 group-hover:scale-110 [&_svg]:w-14 [&_svg]:h-14">
+            {icon}
+          </div>
+        </div>
+
+        <div className="flex flex-1 flex-col p-6">
+          <span className="text-xs font-medium text-blue-400 uppercase tracking-wide mb-2">
+            {category}
+          </span>
           <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors mb-2">
-            {repo.name}
+            {name}
           </h3>
-          <p className="text-slate-400 text-sm line-clamp-2 min-h-[2.5rem]">
-            {repo.description || 'No description available'}
+          <p className="text-slate-400 text-sm leading-relaxed mb-4">
+            {description}
           </p>
-        </div>
-        <ExternalLink className="w-5 h-5 text-slate-500 group-hover:text-blue-400 transition-colors flex-shrink-0 ml-4" />
-      </div>
 
-      <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-700/50">
-        <div className="flex items-center gap-4">
-          {repo.language && (
-            <div className="flex items-center gap-2">
+          <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-700/50">
+            {tags.map((tag) => (
               <span
-                className="w-3 h-3 rounded-full"
-                style={{ backgroundColor: getLanguageColor(repo.language) }}
-              />
-              <span className="text-sm text-slate-400">{repo.language}</span>
-            </div>
-          )}
-          <div className="flex items-center gap-1 text-slate-400 text-sm">
-            <Star className="w-4 h-4" />
-            {repo.stargazers_count}
+                key={tag}
+                className="px-3 py-1 rounded-full bg-slate-800/60 text-slate-300 text-xs"
+              >
+                {tag}
+              </span>
+            ))}
           </div>
-          <div className="flex items-center gap-1 text-slate-400 text-sm">
-            <GitFork className="w-4 h-4" />
-            {repo.forks_count}
+
+          <div className="mt-4 flex items-center gap-2 text-sm font-medium text-blue-400 group-hover:gap-3 transition-all">
+            {viewProjectLabel}
+            <ArrowUpRight className="w-4 h-4" />
           </div>
         </div>
-      </div>
-
-      <div className="mt-4">
-        <span className="text-xs text-blue-400 group-hover:underline">
-          {viewOnGithub} →
-        </span>
-      </div>
-    </motion.a>
+      </Link>
+    </motion.div>
   );
 }
