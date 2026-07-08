@@ -19,31 +19,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cristian Barbosa | Senior Full Stack Engineer",
-  description: "Senior Full Stack Engineer specializing in Event-Driven Architecture, .NET, Kafka, and Distributed Systems. Building scalable backend systems and modern web applications.",
-  keywords: ["Full Stack Engineer", "Software Developer", ".NET", "Kafka", "Microservices", "Clean Architecture", "Event-Driven", "Colombia"],
+  title: "Cristian Barbosa | Diseño y Desarrollo Web para tu Negocio",
+  description: "Diseño y desarrollo sitios web a la medida para negocios de todo tipo: páginas corporativas, tiendas en línea y landing pages rápidas, seguras y responsive.",
+  keywords: ["Diseño Web", "Desarrollo Web", "Páginas Web para Negocios", "Tiendas en Línea", "Sitios Web Responsive", "Desarrollador Web", "Colombia"],
   authors: [{ name: "Cristian Barbosa" }],
   creator: "Cristian Barbosa",
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "es_ES",
     url: "https://cbarbosa.org",
-    siteName: "Cristian Barbosa Portfolio",
-    title: "Cristian Barbosa | Senior Full Stack Engineer",
-    description: "Senior Full Stack Engineer specializing in Event-Driven Architecture, .NET, Kafka, and Distributed Systems.",
+    siteName: "Cristian Barbosa | Diseño y Desarrollo Web",
+    title: "Cristian Barbosa | Diseño y Desarrollo Web para tu Negocio",
+    description: "Diseño y desarrollo sitios web a la medida para negocios de todo tipo: rápidos, modernos y pensados para convertir visitantes en clientes.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Cristian Barbosa - Senior Full Stack Engineer",
+        alt: "Cristian Barbosa - Diseño y Desarrollo Web",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cristian Barbosa | Senior Full Stack Engineer",
-    description: "Senior Full Stack Engineer specializing in Event-Driven Architecture, .NET, Kafka, and Distributed Systems.",
+    title: "Cristian Barbosa | Diseño y Desarrollo Web para tu Negocio",
+    description: "Diseño y desarrollo sitios web a la medida para negocios de todo tipo: rápidos, modernos y pensados para convertir visitantes en clientes.",
     images: ["/og-image.png"],
   },
   robots: {

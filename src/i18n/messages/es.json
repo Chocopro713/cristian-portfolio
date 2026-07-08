@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Inicio",
+    "services": "Servicios",
     "about": "Sobre Mí",
     "experience": "Experiencia",
     "expertise": "Expertise",
@@ -8,66 +9,66 @@
     "contact": "Contacto"
   },
   "hero": {
-    "title": "Senior Full Stack Engineer",
-    "subtitle": "Diseñando sistemas backend escalables y arquitecturas orientadas a eventos",
+    "title": "Desarrollador de Software",
+    "subtitle": "Construyo sistemas y sitios web sólidos, rápidos y pensados para crecer con tu negocio",
     "viewProjects": "Ver Proyectos",
     "contactMe": "Contáctame"
   },
   "about": {
     "title": "Sobre Mí",
-    "description": "Soy un Ingeniero Full Stack Senior apasionado por construir sistemas escalables y mantenibles. Con amplia experiencia en arquitecturas distribuidas y sistemas orientados a eventos, me especializo en diseñar soluciones que manejan escenarios de alto rendimiento mientras mantienen principios de código limpio.",
-    "focus1": "Diseño de Sistemas Escalables",
-    "focus1Desc": "Construyendo sistemas que crecen sin problemas con las demandas del negocio",
-    "focus2": "Arquitectura Limpia",
-    "focus2Desc": "Implementando patrones que aseguran mantenibilidad y testabilidad",
-    "focus3": "Sistemas Distribuidos",
-    "focus3Desc": "Diseñando arquitecturas tolerantes a fallos y altamente disponibles"
+    "description": "Soy desarrollador de software con más de 10 años de experiencia construyendo sistemas y aplicaciones para empresas de distintos tamaños. Me especializo en crear soluciones sólidas, rápidas y fáciles de mantener a largo plazo — ya sea una plataforma compleja para una empresa grande o el sitio web de un negocio que recién comienza.",
+    "focus1": "Sistemas que Crecen con tu Negocio",
+    "focus1Desc": "Construyo soluciones pensadas para escalar, sin necesidad de rehacerlas cuando tu negocio crece",
+    "focus2": "Código Limpio y Mantenible",
+    "focus2Desc": "Escribo software ordenado y bien organizado, fácil de entender y de seguir mejorando en el futuro",
+    "focus3": "Sistemas Conectados y Confiables",
+    "focus3Desc": "Diseño soluciones donde cada parte se comunica de forma estable, incluso bajo alta demanda"
   },
   "experience": {
     "title": "Experiencia",
-    "subtitle": "Entregando soluciones de impacto en entornos empresariales",
+    "subtitle": "Proyectos reales con resultados medibles",
     "project1": {
       "title": "Optimización Logística Empresarial",
-      "description": "Lideré el desarrollo de una plataforma logística integral que logró una mejora del 25-50% en eficiencia operativa a través de optimización inteligente de rutas y sistemas de seguimiento en tiempo real.",
+      "description": "Lideré el desarrollo de una plataforma logística que mejoró la eficiencia operativa entre un 25% y 50%, gracias a rutas optimizadas y seguimiento en tiempo real.",
       "impact": "25-50% Mejora en Eficiencia"
     },
     "project2": {
-      "title": "Sistemas Distribuidos en Tiempo Real con Kafka",
-      "description": "Arquitecté e implementé microservicios orientados a eventos usando Apache Kafka, habilitando procesamiento de datos en tiempo real y comunicación fluida entre servicios distribuidos.",
+      "title": "Plataforma de Datos en Tiempo Real",
+      "description": "Diseñé un sistema que procesa información al instante y mantiene comunicadas a distintas partes de la plataforma sin demoras.",
       "impact": "Procesamiento en Tiempo Real"
     },
     "project3": {
-      "title": "Plataforma de Eventos con QR Seguro",
-      "description": "Diseñé y construí una plataforma segura de gestión de eventos con validación de códigos QR encriptados, arquitectura multi-tenant y seguimiento de asistencia en tiempo real.",
+      "title": "Plataforma de Eventos con Código QR Seguro",
+      "description": "Construí una plataforma para gestionar eventos con validación segura por código QR, pensada para manejar múltiples clientes y asistentes en tiempo real.",
       "impact": "Seguridad Mejorada"
     }
   },
   "expertise": {
-    "title": "Arquitectura & Expertise",
-    "subtitle": "Competencias principales en arquitectura de software moderna",
+    "title": "Cómo Trabajo",
+    "subtitle": "Principios que sigo en cada proyecto para que el resultado final sea sólido y confiable",
     "cleanArch": {
-      "title": "Arquitectura Limpia",
-      "description": "Implementando separación de responsabilidades con inversión de dependencias para bases de código mantenibles"
+      "title": "Código Limpio y Organizado",
+      "description": "Escribo software fácil de mantener y de escalar en el tiempo, sin dolores de cabeza a futuro"
     },
     "ddd": {
-      "title": "DDD & CQRS",
-      "description": "Diseño Orientado al Dominio con Segregación de Responsabilidad de Comandos y Consultas para dominios complejos"
+      "title": "Diseño Centrado en tu Negocio",
+      "description": "Modelo el software alrededor de cómo funciona realmente tu negocio, para que la solución tenga sentido para ti"
     },
     "microservices": {
-      "title": "Microservicios",
-      "description": "Diseñando arquitecturas de servicios débilmente acoplados e independientemente desplegables"
+      "title": "Arquitecturas Flexibles",
+      "description": "Divido los sistemas grandes en partes independientes, para escalar solo lo que necesitas sin afectar el resto"
     },
     "eventDriven": {
-      "title": "Sistemas Orientados a Eventos",
-      "description": "Construyendo sistemas reactivos con Apache Kafka y colas de mensajes"
+      "title": "Procesos en Tiempo Real",
+      "description": "Construyo sistemas que reaccionan al instante ante nueva información, ideales para negocios que necesitan respuestas rápidas"
     },
     "secureApi": {
-      "title": "Diseño Seguro de APIs",
-      "description": "Implementando OAuth2, JWT y patrones de comunicación segura"
+      "title": "Seguridad de tus Datos",
+      "description": "Implemento buenas prácticas de seguridad para proteger la información de tu negocio y de tus usuarios"
     },
     "performance": {
-      "title": "Optimización de Rendimiento",
-      "description": "Perfilando y optimizando aplicaciones para máximo throughput"
+      "title": "Rendimiento y Velocidad",
+      "description": "Optimizo cada solución para que funcione rápido, incluso con muchos usuarios al mismo tiempo"
     }
   },
   "techStack": {
@@ -143,5 +144,77 @@
   "footer": {
     "rights": "Todos los derechos reservados.",
     "madeWith": "Hecho con"
+  },
+  "homeHero": {
+    "badge": "Soluciones Web a la Medida",
+    "title": "Impulsa tu negocio con una página web",
+    "titleHighlight": "profesional",
+    "subtitle": "Diseño y desarrollo sitios web a la medida para negocios de todo tipo — rápidos, modernos y pensados para convertir visitantes en clientes.",
+    "ctaPrimary": "Contáctame",
+    "ctaSecondary": "Ver Proyectos",
+    "whatsapp": "Escríbeme por WhatsApp",
+    "whatsappMessage": "Hola Cristian, quiero cotizar una página web para mi negocio.",
+    "valueProps": {
+      "goals": "Enfocado en tus Objetivos",
+      "attention": "Atención Personalizada",
+      "growth": "Soluciones que Hacen Crecer tu Marca",
+      "results": "Resultados que se Ven y se Sienten"
+    }
+  },
+  "services": {
+    "title": "Lo Que Puedo Hacer Por Tu Negocio",
+    "subtitle": "Servicios pensados para que tu presencia en internet trabaje a tu favor",
+    "items": [
+      {
+        "title": "Páginas Web a la Medida",
+        "description": "Diseños modernos, únicos y adaptados a tu marca."
+      },
+      {
+        "title": "Tiendas Virtuales",
+        "description": "Vende en línea de forma segura y profesional."
+      },
+      {
+        "title": "Diseño 100% Responsive",
+        "description": "Tu sitio se verá perfecto en todos los dispositivos."
+      },
+      {
+        "title": "Rendimiento y Optimización",
+        "description": "Sitios rápidos, optimizados y listos para crecer contigo."
+      },
+      {
+        "title": "Seguridad y Confiabilidad",
+        "description": "Desarrollos seguros para proteger tu negocio y tus usuarios."
+      },
+      {
+        "title": "Soluciones Personalizadas",
+        "description": "Funcionalidades a medida que se adaptan a tus objetivos."
+      },
+      {
+        "title": "Soporte y Acompañamiento",
+        "description": "Te acompaño en cada paso para que tu proyecto sea un éxito."
+      }
+    ]
+  },
+  "process": {
+    "title": "Cómo Trabajo",
+    "subtitle": "Un proceso simple y transparente, de principio a fin",
+    "steps": [
+      {
+        "title": "Conversamos",
+        "description": "Entendemos juntos tu negocio, tus objetivos y qué necesita tu sitio web."
+      },
+      {
+        "title": "Propuesta y Diseño",
+        "description": "Te muestro una propuesta visual antes de escribir una sola línea de código."
+      },
+      {
+        "title": "Desarrollo",
+        "description": "Construyo tu sitio con tecnología moderna, cuidando cada detalle."
+      },
+      {
+        "title": "Entrega y Soporte",
+        "description": "Lanzamos tu sitio y sigo acompañándote después de la entrega."
+      }
+    ]
   }
 }

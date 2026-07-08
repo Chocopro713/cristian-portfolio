@@ -9,9 +9,10 @@ import { Locale } from '@/i18n/request';
 
 interface NavbarProps {
   currentLocale: Locale;
+  variant?: 'home' | 'about';
 }
 
-export default function Navbar({ currentLocale }: NavbarProps) {
+export default function Navbar({ currentLocale, variant = 'home' }: NavbarProps) {
   const t = useTranslations('nav');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -24,14 +25,24 @@ export default function Navbar({ currentLocale }: NavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = [
-    { href: '#home', label: t('home') },
-    { href: '#about', label: t('about') },
-    { href: '#experience', label: t('experience') },
-    { href: '#expertise', label: t('expertise') },
-    { href: '#projects', label: t('projects') },
-    { href: '#contact', label: t('contact') },
-  ];
+  const navItems =
+    variant === 'home'
+      ? [
+          { href: '#home', label: t('home') },
+          { href: '#services', label: t('services') },
+          { href: '#projects', label: t('projects') },
+          { href: '/sobre-mi', label: t('about') },
+          { href: '#contact', label: t('contact') },
+        ]
+      : [
+          { href: '#home', label: t('home') },
+          { href: '#about', label: t('about') },
+          { href: '#experience', label: t('experience') },
+          { href: '#expertise', label: t('expertise') },
+          { href: '#projects', label: t('projects') },
+          { href: '#contact', label: t('contact') },
+          { href: '/', label: t('services') },
+        ];
 
   return (
     <motion.header
@@ -43,8 +54,9 @@ export default function Navbar({ currentLocale }: NavbarProps) {
       }`}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold gradient-text">
-          CB
+        <Link href="/" className="flex items-center text-xl font-bold">
+          <span className="text-white">CBarbosa</span>
+          <span className="gradient-text">.org</span>
         </Link>
 
         {/* Desktop Navigation */}

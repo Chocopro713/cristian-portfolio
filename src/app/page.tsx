@@ -1,11 +1,10 @@
 import { getLocale } from '@/i18n/actions';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import Hero from '@/components/sections/Hero';
-import About from '@/components/sections/About';
-import Experience from '@/components/sections/Experience';
-import Expertise from '@/components/sections/Expertise';
+import ServicesHero from '@/components/sections/ServicesHero';
+import Services from '@/components/sections/Services';
 import Projects from '@/components/sections/Projects';
+import Process from '@/components/sections/Process';
 import Contact from '@/components/sections/Contact';
 
 export default async function Home() {
@@ -13,13 +12,12 @@ export default async function Home() {
 
   return (
     <>
-      <Navbar currentLocale={locale} />
+      <Navbar currentLocale={locale} variant="home" />
       <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Expertise />
+        <ServicesHero />
+        <Services />
         <Projects />
+        <Process />
         <Contact />
       </main>
       <Footer />

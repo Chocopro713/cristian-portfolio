@@ -19,11 +19,12 @@ export default function Footer() {
             viewport={{ once: true }}
             className="text-center md:text-left"
           >
-            <Link href="/" className="text-2xl font-bold gradient-text">
-              Cristian Barbosa
+            <Link href="/" className="flex items-center justify-center md:justify-start text-2xl font-bold">
+              <span className="text-white">CBarbosa</span>
+              <span className="gradient-text">.org</span>
             </Link>
             <p className="text-slate-400 text-sm mt-2">
-              Senior Full Stack Engineer
+              Diseño y Desarrollo Web para tu Negocio
             </p>
           </motion.div>
 

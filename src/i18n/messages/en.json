@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Home",
+    "services": "Services",
     "about": "About",
     "experience": "Experience",
     "expertise": "Expertise",
@@ -8,66 +9,66 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Senior Full Stack Engineer",
-    "subtitle": "Designing scalable backend systems and event-driven architectures",
+    "title": "Software Developer",
+    "subtitle": "I build solid, fast systems and websites designed to grow with your business",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me"
   },
   "about": {
     "title": "About Me",
-    "description": "I'm a Senior Full Stack Engineer with a passion for building scalable, maintainable systems. With extensive experience in distributed architectures and event-driven systems, I specialize in designing solutions that handle high-throughput scenarios while maintaining clean code principles.",
-    "focus1": "Scalable Systems Design",
-    "focus1Desc": "Building systems that grow seamlessly with business demands",
-    "focus2": "Clean Architecture",
-    "focus2Desc": "Implementing patterns that ensure maintainability and testability",
-    "focus3": "Distributed Systems",
-    "focus3Desc": "Designing fault-tolerant, highly available architectures"
+    "description": "I'm a software developer with over 10 years of experience building systems and applications for businesses of all sizes. I specialize in creating solutions that are solid, fast, and easy to maintain long-term — whether it's a complex platform for a large company or the website of a business that's just getting started.",
+    "focus1": "Systems That Grow With Your Business",
+    "focus1Desc": "I build solutions designed to scale, without needing to be rebuilt as your business grows",
+    "focus2": "Clean, Maintainable Code",
+    "focus2Desc": "I write organized, well-structured software that's easy to understand and keep improving over time",
+    "focus3": "Connected, Reliable Systems",
+    "focus3Desc": "I design solutions where every part communicates reliably, even under heavy demand"
   },
   "experience": {
     "title": "Experience",
-    "subtitle": "Delivering impactful solutions across enterprise environments",
+    "subtitle": "Real projects with measurable results",
     "project1": {
       "title": "Enterprise Logistics Optimization",
-      "description": "Led the development of a comprehensive logistics platform that achieved 25-50% improvement in operational efficiency through intelligent route optimization and real-time tracking systems.",
+      "description": "Led the development of a logistics platform that improved operational efficiency by 25-50%, thanks to optimized routes and real-time tracking.",
       "impact": "25-50% Efficiency Improvement"
     },
     "project2": {
-      "title": "Real-Time Kafka Distributed Systems",
-      "description": "Architected and implemented event-driven microservices using Apache Kafka, enabling real-time data processing and seamless communication between distributed services.",
+      "title": "Real-Time Data Platform",
+      "description": "Designed a system that processes information instantly and keeps different parts of the platform communicating without delays.",
       "impact": "Real-Time Processing"
     },
     "project3": {
-      "title": "Secure QR Event Platform",
-      "description": "Designed and built a secure event management platform featuring encrypted QR code validation, multi-tenant architecture, and real-time attendance tracking.",
+      "title": "Secure QR Code Event Platform",
+      "description": "Built a platform to manage events with secure QR code validation, designed to handle multiple clients and attendees in real time.",
       "impact": "Enhanced Security"
     }
   },
   "expertise": {
-    "title": "Architecture & Expertise",
-    "subtitle": "Core competencies in modern software architecture",
+    "title": "How I Work",
+    "subtitle": "Principles I follow on every project so the final result is solid and reliable",
     "cleanArch": {
-      "title": "Clean Architecture",
-      "description": "Implementing separation of concerns with dependency inversion for maintainable codebases"
+      "title": "Clean, Organized Code",
+      "description": "I write software that's easy to maintain and scale over time, without future headaches"
     },
     "ddd": {
-      "title": "DDD & CQRS",
-      "description": "Domain-Driven Design with Command Query Responsibility Segregation for complex domains"
+      "title": "Design Centered on Your Business",
+      "description": "I model the software around how your business actually works, so the solution makes sense for you"
     },
     "microservices": {
-      "title": "Microservices",
-      "description": "Designing loosely coupled, independently deployable service architectures"
+      "title": "Flexible Architectures",
+      "description": "I split large systems into independent parts, so you can scale only what you need without affecting the rest"
     },
     "eventDriven": {
-      "title": "Event-Driven Systems",
-      "description": "Building reactive systems with Apache Kafka and message queues"
+      "title": "Real-Time Processes",
+      "description": "I build systems that react instantly to new information, ideal for businesses that need fast responses"
     },
     "secureApi": {
-      "title": "Secure API Design",
-      "description": "Implementing OAuth2, JWT, and secure communication patterns"
+      "title": "Data Security",
+      "description": "I implement good security practices to protect your business's and your users' information"
     },
     "performance": {
-      "title": "Performance Optimization",
-      "description": "Profiling and optimizing applications for maximum throughput"
+      "title": "Performance and Speed",
+      "description": "I optimize every solution to run fast, even with many users at the same time"
     }
   },
   "techStack": {
@@ -143,5 +144,77 @@
   "footer": {
     "rights": "All rights reserved.",
     "madeWith": "Made with"
+  },
+  "homeHero": {
+    "badge": "Web Solutions Tailored to You",
+    "title": "Grow your business with a",
+    "titleHighlight": "professional website",
+    "subtitle": "I design and build custom websites for businesses of all kinds — fast, modern, and built to turn visitors into customers.",
+    "ctaPrimary": "Contact Me",
+    "ctaSecondary": "View Projects",
+    "whatsapp": "Message me on WhatsApp",
+    "whatsappMessage": "Hi Cristian, I'd like a quote for a website for my business.",
+    "valueProps": {
+      "goals": "Focused on Your Goals",
+      "attention": "Personalized Attention",
+      "growth": "Solutions That Grow Your Brand",
+      "results": "Results You Can See and Feel"
+    }
+  },
+  "services": {
+    "title": "What I Can Do For Your Business",
+    "subtitle": "Services designed to make your online presence work in your favor",
+    "items": [
+      {
+        "title": "Custom Websites",
+        "description": "Modern, unique designs tailored to your brand."
+      },
+      {
+        "title": "Online Stores",
+        "description": "Sell online securely and professionally."
+      },
+      {
+        "title": "100% Responsive Design",
+        "description": "Your site will look perfect on every device."
+      },
+      {
+        "title": "Performance and Optimization",
+        "description": "Fast sites, optimized and ready to grow with you."
+      },
+      {
+        "title": "Security and Reliability",
+        "description": "Secure builds that protect your business and your users."
+      },
+      {
+        "title": "Custom Solutions",
+        "description": "Tailored features that adapt to your goals."
+      },
+      {
+        "title": "Support and Guidance",
+        "description": "I'm with you every step of the way to make your project a success."
+      }
+    ]
+  },
+  "process": {
+    "title": "How I Work",
+    "subtitle": "A simple, transparent process from start to finish",
+    "steps": [
+      {
+        "title": "We Talk",
+        "description": "We get to know your business, your goals, and what your website needs."
+      },
+      {
+        "title": "Proposal and Design",
+        "description": "I show you a visual proposal before writing a single line of code."
+      },
+      {
+        "title": "Development",
+        "description": "I build your site with modern technology, taking care of every detail."
+      },
+      {
+        "title": "Launch and Support",
+        "description": "We launch your site and I stay with you after delivery."
+      }
+    ]
   }
 }
